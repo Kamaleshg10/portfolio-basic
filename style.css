@@ -301,4 +301,5 @@ footer .copy{
 .cright{
     color: var(--color3);
     margin-right: 5px;
+    font-weight: 300;
 }
