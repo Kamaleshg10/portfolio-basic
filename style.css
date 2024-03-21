@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Pacifico');
+
 
 *{
     margin: 0px ;
     padding: 0px;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
-    scroll-behavior: smooth;
+    /* scroll-behavior: smooth; */
 }
 a{
     text-decoration: none;
@@ -25,16 +25,21 @@ a{
     --head-font:50px;
 }
 body{    
-    /* background: linear-gradient(to left , #0322d1, #05a2c9);   */
+    background: linear-gradient(to left , #0322d1, #05a2c9);  
     background-color: var(--color5);
     color: var(--color1);
 }
 .container{
     padding: 10px 10%;
 }
-header nav{
+header {
+    position: sticky;
+    top: 0;
+}
+nav{
     font-weight: 500;
     width: 100%;
+    height: 4rem;
     display: flex;
     justify-content: space-between;
     padding: 1rem;
@@ -42,7 +47,6 @@ header nav{
     font-size:20px ;
     color: #fff;
     background-color: var(--color5);
-    position: fixed;
 }
 .logo{
     font-size: 20px;
@@ -57,12 +61,23 @@ nav ul{
     color:var(--color1); 
 }
 nav ul li a{
+    color: var(--color1);
+    font-size: 19px;
+    position:relative;
     margin-right: 20px;
 }
-nav ul li a:hover{
-    color: var(--color3);
-    padding-bottom: 0.5rem;
-    border-bottom: 3px solid var(--color3);
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background:var(--color3) ;
+    position: absolute;
+    left: 0;
+    bottom: -6px; 
+    transition: 0.5s;
+}
+nav ul li a:hover::after{
+    width: 100%;
 }
 nav ul li span{
     padding-right: 15px;
@@ -78,21 +93,32 @@ nav ul li .underline{
 .banner span{
     color: var(--color3);
 }
-.banner{
-    width: 100%;
-    background-image: url(images/img1.jp);
+.img{
+    background: url;
+}
+/* .banner{
+    z-index: -1;
+} */
+.banner img{
+    width: 100vw;
+    height: 100vh;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size:cover;    
+    opacity: 0.2;
+    position: absolute;
+    z-index: -1;
 }
 .banner-text{
+    margin-left: 10rem;
+    position: relative;
     width: 100%;
     height: 100vh;
     text-align: left;
     display: flex;    
     flex-direction: column;
     justify-content: center;
-    padding-left: 1rem;
     font-size: 35px;
+    z-index: -1;
 }
 
 /* start about */
@@ -149,18 +175,21 @@ nav ul li .underline{
     padding-top: 4rem; 
 }
 .card{
-    display: grid;
-    grid-template-columns:auto auto auto auto;
+    display: flex;
     align-items: center;
+    justify-content: center;
+    
 }
 .flip-card {
     margin-bottom: 20px;    
     text-align: center;
     background-color: transparent;
-    width: 200px;
-    height: 300px;
-    perspective: 1000px; 
-  }
+    width: 150px;
+    height: 250px;
+    perspective: 1000px;
+    margin-right: auto;
+    z-index: -1;
+}
   
   .flip-card-inner {
     background-color:rgba(252, 252, 252, 0.247);
@@ -179,8 +208,8 @@ nav ul li .underline{
     transform: rotateY(180deg);
   }
   .flip-card-inner img {
-    max-width: 200px;
-    max-height: 250px;
+    max-width: 150px;
+    max-height: 200px;
     margin-top: -50px;
   }
   .flip-card-front, .flip-card-back {
@@ -195,7 +224,7 @@ nav ul li .underline{
     background-color: var(--color4);
     color: white;
     transform: rotateY(180deg);
-    font-size: 20px;
+    font-size: 15px;
   }
   .flip-card-back h1{
     padding-top: 20px;
@@ -231,7 +260,7 @@ nav ul li .underline{
     margin-top: 50px;
 }
 .btn{
-    margin-top: 60px;
+    margin-top: 20px;
     padding: 8px 20px;
     font-size: 18px;
     border-radius: 5px;
@@ -243,6 +272,7 @@ nav ul li .underline{
 .btn:hover{
     background-color: var(--color3);
     border-color: var(--color4);
+    outline: none;
 }
 
 /* contact */
@@ -259,8 +289,6 @@ nav ul li .underline{
 }
 .inputs{
     text-align: center;
-    /* outline: none;
-    border: none; */
 }
 input{
     border-radius: 5px;
@@ -271,7 +299,6 @@ input{
     background-color:var(--color6) ;
     color: var(--color1);
     border: none;
-    /* outline: none; */
 }
 #message{
     height: 150px;
