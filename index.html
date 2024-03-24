@@ -11,14 +11,17 @@
 </head>
 <body>
     <header>
-        <nav>
+        <nav  class="col-3">
             <a href="#" class="logo"><span class="logo1">K</span>AMAL</a>
-            <ul>
+            <ul id="sidemenu">
                 <li><a href="#home"><span><i class="fa-solid fa-house"></i></span>Home</a></li>
                 <li><a href="#about"><span><i class="fa-solid fa-circle-info"></i></span>About us</a></li>
                 <li><a href="#skills"><span><i class="fa-solid fa-brain"></i></span> Skills</a></li>
                 <li><a href="#portfolio"><span><i class="fa-solid fa-file-contract"></i></span> portfolio</a></li>
-                <li><a href="#portfolio"><span><i class="fa-solid fa-address-card"></i></span> Contact</a></li>
+                <li><a href="#contact"><span><i class="fa-solid fa-address-card"></i></span> Contact</a></li>
+                <i class="fas fa-times" onclick="closeMenu()" ></i>
+          </ul>
+          <i class="fas fa-bars" onclick="openMenu()"></i>
             </ul>
         </nav>
     </header>
@@ -65,14 +68,14 @@
 
         <!-- Start skills -->
             
-        <div class="container">
+        <div class="container col-6">
             <section class="slider" id="skills">
                 <h1 class="head"><span class="logo1">S</span>kills</h1>                
                 <div class="card">
                     <div class="flip-card">
                         <div class="flip-card-inner">
                           <div class="flip-card-front">
-                            <img src="images/icons8-html-logo-480.png" alt="Avatar" style="width:300px;height:300px;">
+                            <img src="images/icons8-html-logo-480.png" alt="Avatar" >
                           </div>
                           <div class="flip-card-back">
                             <h1>HTML</h1> 
@@ -83,7 +86,7 @@
                     <div class="flip-card">
                         <div class="flip-card-inner">
                           <div class="flip-card-front">
-                            <img src="images/icons8-css-logo-480.png" alt="Avatar" style="width:300px;height:300px;">
+                            <img src="images/icons8-css-logo-480.png" alt="Avatar" >
                           </div>
                           <div class="flip-card-back">
                             <h1>CSS</h1>
@@ -93,7 +96,7 @@
                     <div class="flip-card">
                         <div class="flip-card-inner">
                           <div class="flip-card-front">
-                            <img src="images/icons8-javascript-480.png" alt="Avatar" style="width:300px;height:300px;">
+                            <img src="images/icons8-javascript-480.png" alt="Avatar" >
                           </div>
                           <div class="flip-card-back">
                             <h1>JavaScript</h1>                              
@@ -103,7 +106,7 @@
                     <div class="flip-card">
                         <div class="flip-card-inner">
                           <div class="flip-card-front">
-                            <img src="images/icons8-bootstrap-logo-480.png" alt="Avatar" style="width:300px;height:300px;">
+                            <img src="images/icons8-bootstrap-logo-480.png" alt="Avatar" >
                           </div>
                           <div class="flip-card-back">
                             <h1>Bootstrap</h1>                                                          
@@ -113,7 +116,7 @@
                     <div class="flip-card">
                       <div class="flip-card-inner">
                         <div class="flip-card-front">
-                          <img src="images/icons8-git-logo-480.png" alt="Avatar" style="width:300px;height:300px;">
+                          <img src="images/icons8-git-logo-480.png" alt="Avatar" >
                         </div>
                         <div class="flip-card-back">
                           <h1>Git</h1>                                                          
@@ -126,7 +129,7 @@
                     <div class="flip-card">
                         <div class="flip-card-inner">
                           <div class="flip-card-front">
-                            <img src="images/icons8-react-400.png" alt="Avatar" style="width:300px;height:300px;">
+                            <img src="images/icons8-react-400.png" alt="Avatar" >
                           </div>
                           <div class="flip-card-back">
                             <h1>REACT</h1>                                                          
@@ -136,7 +139,7 @@
                     <div class="flip-card">
                         <div class="flip-card-inner">
                           <div class="flip-card-front">
-                            <img src="images/icons8-node-js-480.png" alt="Avatar" style="width:300px;height:300px;">
+                            <img src="images/icons8-node-js-480.png" alt="Avatar" >
                           </div>
                           <div class="flip-card-back">
                             <h1>NODE-JS</h1>                                                          
@@ -146,7 +149,7 @@
                     <div class="flip-card">
                         <div class="flip-card-inner">
                           <div class="flip-card-front">
-                            <img src="images/icons8-python-480.png" alt="Avatar" style="width:300px;height:300px;">
+                            <img src="images/icons8-python-480.png" alt="Avatar" >
                           </div>
                           <div class="flip-card-back">
                             <h1>PYTHON</h1>                                                          
@@ -156,7 +159,7 @@
                     <div class="flip-card">
                         <div class="flip-card-inner">
                           <div class="flip-card-front">
-                            <img src="images/icons8-mongodb-480.png" alt="Avatar" style="width:300px;height:300px;">
+                            <img src="images/icons8-mongodb-480.png" alt="Avatar" >
                           </div>
                           <div class="flip-card-back">
                             <h1>MONGO-db</h1>                                                          
@@ -171,9 +174,9 @@
              <!-- End skills -->
 
           <!-- Start portfolio & contact -->
-        <section id="portfolio" class="contact">            
-            <div class="container">
-                <div class="portfolio-left">
+        <section id="portfolio">            
+            <div class="container" id="contact">
+                <div class="portfolio-left" >
                     <h1 class="head">Portfolio</h1>
                     <h5><span><i class="fa-solid fa-paper-plane"></i></span>kamaleshmech10@gmail.com</h5>
                     <p><span><i class="fa-solid fa-phone"></i></span>+91 8883940989</p>
@@ -188,7 +191,7 @@
                         <a href="files/my-cv.pdf" download class="btn">Download CV</a>
                     </div>
                 </div>
-                <div class="contact-right">
+                <div class="contact-right" >
                     <h1 class="head"><span class="logo1">C</span>ontact</h1>
                     <form class="inputs">
                         <input type="text" id="username" placeholder="Enter Your Name" >
@@ -212,7 +215,7 @@
 
     
 </body>
-    <script src="script.j"></script>
+    <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script>
         var typed =new Typed('#input',{

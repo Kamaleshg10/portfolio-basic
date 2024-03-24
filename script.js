@@ -1,31 +1,17 @@
 
-// //requires carouFredsel.js
+    // sideMenu
+    var sidemenu = document.getElementById('sidemenu');
+    // openMenu
+    function openMenu(){
+      sidemenu.style.right = '0';
+    }
+    // closeMenu
+    function closeMenu(){
+      sidemenu.style.right = '-200px';
+    }
 
-// jQuery(document).ready(function() {
-//     "use strict";
-//     $(".carousel").carouFredSel({
-//       responsive: true,
-//       width: "100%",
-//       circular: true,
-//       scroll: {
-//         item: 1,
-//         duration: 500,
-//         pauseOnHover: true
-//       },
-//       auto: true,
-//       items: {
-//         visible: {
-//           min: 1,
-//           max: 1
-//         },
-//         height: "variable"
-//       },
-//       pagination: {
-//         container: ".sliderpagnation",
-//         anchorBuilder: false
-//       }
-//     });
-//   });
+
+
 
 
 

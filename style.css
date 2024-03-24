@@ -236,8 +236,7 @@ nav ul li .underline{
 .portfolio-left{
     float: left;
     text-align: center;
-    flex-direction: column;
-    
+    flex-direction: column;    
 }
 .portfolio-left h5,p{
     align-items: center;
@@ -273,6 +272,7 @@ nav ul li .underline{
 }
 
 /* contact */
+
 
 .contact-right {
     padding-left: 10px;
@@ -324,12 +324,11 @@ input{
     font-size: 24px;
     border: none;
     outline: none;
-    background-color: rgb(0, 255, 42);
+    background-color: #344cd8;
     color: white;
     cursor: pointer;
     padding: 10px;
     border-radius: 50%;
-
   }
   
   #myBtn:hover {
@@ -352,22 +351,38 @@ footer .copy{
     font-weight: 300;
 }
 
+
+nav .fas{
+    display: none;
+}
 @media only screen and (max-width:600px){
+    
     body{
         overflow-x: hidden;
     }
-    #header{
-        background-image: url('images/bg.jpg');
+    #sidemenu{
+        display: flex;
+        flex-direction: column;
     }
     .banner-text{
-        /* margin-top:100% ; */
-        /* font-size: 16px; */
-        font-size: 18px;
-        margin-top: -10rem;
-        margin-left: 1rem;
-        padding: 10px;
-    
-    nav {
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        text-align: left;
+        margin-left: 2rem;
+        padding-top: 5rem;
+        margin-bottom: 0;
+
+    }
+    .banner img{
+        display: none;
+        margin-bottom: 0;
+    }
+    .banner-text h1{
+        font-size: 3rem;
+        /* padding: 0; */
+    }
+    nav .fas{
         display: block;
         font-size: 25px;
     }
@@ -391,36 +406,43 @@ footer .copy{
         top: 25px;
         left: 25px;
         cursor: pointer;
-    }
+    }    
+    #about{
+        margin-top: 0;
+        margin-bottom: 20rem;
+    }    
     .main-title{
-        font-size: 40px;
-        display: block;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        font-size: 20px;
     }
-    .about-col-1,.about-col-2{
-        flex-basis:100% ;
+    #sills{
+        /* margin-top: 2rem; */
+        display: flex;
+        flex-direction: column;
     }
-    .about-col-1{
-        margin-bottom: 30px;
+    .card{
+        display: grid;
+        grid-template-columns: auto auto;
+        margin-top: 1rem;
+        margin-bottom: 0;
     }
-    .about-col-2{
-        font-size: 14px;
+    .flip-card{
+        width: 6.5rem;
+        height:7rem;
+        margin: 1.5rem;
     }
-    /* dl{
-        display: inline-block;
-    } */
-
-
-
-
-    .tap-links{
-        font-size: 16px;
-        margin-right:20px ;
+    .flip-card-front img{
+        width:6rem;
+        height:6rem;
+        margin-top: -1rem;
     }
-    #portfolio-left, #contact-right{
-        flex-basis: 100%;
+    .contact-right{
+        margin-top: 5rem;
+        width: 85vw;
     }
-    .copy{
-        font-size: 14px;
-    }
+    
 }
-}
+
