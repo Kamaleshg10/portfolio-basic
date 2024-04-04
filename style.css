@@ -269,11 +269,10 @@ nav ul li .underline{
 
 /* contact */
 
-
 .contact-right {
     padding-left: 10px;
     float: right;
-    margin-bottom: 5rem;
+    margin-bottom: 2rem;
     width: 50%;
     display: flex;
     flex-direction: column;
