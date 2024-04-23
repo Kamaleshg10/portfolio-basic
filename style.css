@@ -307,12 +307,13 @@ nav .fas{
 
 @media only screen and (max-width:598px){
     
-    body{
-        overflow: hidden;
-    }
-    #home{
+    *{
         overflow-x: hidden;
+        scroll-behavior: smooth;
     }
+    /* #home{
+        overflow-x: hidden;
+    } */
     #sidemenu{
         display: flex;
         flex-direction: column;
@@ -362,7 +363,7 @@ nav .fas{
     }    
     #about{
         margin-top: 0;
-        margin-bottom: 25rem;
+        margin-bottom:2rem;
     }    
     .main-title{
         display: flex;
