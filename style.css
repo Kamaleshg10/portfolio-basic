@@ -361,7 +361,7 @@ nav .fas{
     }    
     #about{
         margin-top: 0;
-        margin-bottom:2rem;
+        margin-bottom:18rem;
     }    
     .main-title{
         display: flex;
@@ -371,7 +371,7 @@ nav .fas{
         font-size: 20px;
     }
     #skills{
-        margin-top: 2rem;
+        margin-top: 1rem;
     }
     .slider .mainskill, .learnskill {
         display: grid;
